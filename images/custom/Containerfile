@@ -129,6 +129,7 @@ RUN export APP_INSTALL_ARGS="" && \
     --skip-redis-config-generation \
     --verbose \
     /home/frappe/frappe-bench && \
+  /home/frappe/frappe-bench/env/bin/python -m ensurepip && \
   /home/frappe/frappe-bench/env/bin/pip install --upgrade pip setuptools wheel && \
   cd /home/frappe/frappe-bench && \
   echo "{}" > sites/common_site_config.json && \
